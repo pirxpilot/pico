@@ -1,0 +1,39 @@
+{
+  "name": "@pirxpilot/pico",
+  "version": "0.0.0",
+  "description": "Less than nanocomponent to use with choo-like libs.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.me"
+  },
+  "repository": "pirxpilot/pico",
+  "license": "MIT",
+  "keywords": [
+    "choo",
+    "component"
+  ],
+  "dependencies": {
+    "@pirxpilot/nanomorph": "~1",
+    "nanoassert": "~1 || ~2",
+    "nanolru": "~1",
+    "nanotiming": "~7",
+    "ufid": "~1"
+  },
+  "devDependencies": {
+    "jsdom": "~19",
+    "jsdom-global": "~3",
+    "jshint": "~2",
+    "tape": "~5"
+  },
+  "browser": {
+    "assert": "nanoassert"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
