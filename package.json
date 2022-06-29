@@ -14,10 +14,10 @@
     "component"
   ],
   "dependencies": {
+    "@pirxpilot/nanoassert": "^1.0.0",
     "@pirxpilot/nanomorph": "~1",
-    "nanoassert": "~1 || ~2",
+    "@pirxpilot/nanotiming": "^1.0.0",
     "nanolru": "~1",
-    "nanotiming": "~7",
     "ufid": "~1"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "tape": "~5"
   },
   "browser": {
-    "assert": "nanoassert"
+    "assert": "@pirxpilot/nanoassert"
   },
   "scripts": {
     "test": "make check"
