@@ -7,7 +7,10 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/pico",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/pico.git"
+  },
   "license": "MIT",
   "keywords": [
     "choo",
@@ -22,9 +25,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "jsdom": "~19",
-    "jsdom-global": "~3",
-    "tape": "~5"
+    "jsdom": "~26",
+    "jsdom-global": "~3"
   },
   "browser": {
     "assert": "@pirxpilot/nanoassert"

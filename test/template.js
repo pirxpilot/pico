@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('node:test');
 const { template } = require('..');
 
 test('template', t => {
@@ -9,8 +9,7 @@ test('template', t => {
   `;
   const tt = template('foo');
   const el = tt.render({}, () => {});
-  t.equal(el.outerHTML, `<span data-pico="${el.dataset.pico}">bongo</span>`);
-  t.end();
+  t.assert.equal(el.outerHTML, `<span data-pico="${el.dataset.pico}">bongo</span>`);
 });
 
 test('template updateElement', t => {
@@ -25,8 +24,7 @@ test('template updateElement', t => {
     }
   });
   const el = tt.render({ value: 5 }, () => {});
-  t.equal(el.value, '5');
-  t.end();
+  t.assert.equal(el.value, '5');
 });
 
 test('template with slots', t => {
@@ -47,9 +45,7 @@ test('template with slots', t => {
   const tt = template('form').slot('field', template('field'));
   const el = tt.render({}, () => {});
 
-  t.equal(el.nodeName, 'FORM', 'rendered element is a form');
-  t.equal(el.querySelector('label').textContent, 'Label:', 'label is rendered');
-  t.assert(el.querySelector('input'), 'input is rendered');
-
-  t.end();
+  t.assert.equal(el.nodeName, 'FORM', 'rendered element is a form');
+  t.assert.equal(el.querySelector('label').textContent, 'Label:', 'label is rendered');
+  t.assert.ok(el.querySelector('input'), 'input is rendered');
 });

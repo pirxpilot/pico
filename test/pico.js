@@ -1,8 +1,8 @@
-const test = require('tape');
+const test = require('node:test');
 const { pico } = require('..');
 
 test('pico', t => {
-  t.assert(typeof pico === 'function', 'pico exports function');
+  t.assert.equal(typeof pico, 'function', 'pico exports function');
 
   const p = pico('bar', {
     createElement(state) {
@@ -17,21 +17,19 @@ test('pico', t => {
   const emit = () => {};
 
   const el = p.render({ text: 'akuku' }, emit);
-  t.assert(el instanceof Element);
-  t.equal(el.nodeName, 'SPAN');
+  t.assert.ok(el instanceof Element);
+  t.assert.equal(el.nodeName, 'SPAN');
   const id = el.dataset.pico;
-  t.assert(id != null, 'pico should be branded');
+  t.assert.ok(id != null, 'pico should be branded');
 
   document.body.append(el);
 
-  t.equal(document.body.innerHTML, `<span data-pico="${id}">akuku</span>`);
+  t.assert.equal(document.body.innerHTML, `<span data-pico="${id}">akuku</span>`);
 
   const el2 = p.render({ text: 'foo' }, emit);
 
-  t.equal(el2.nodeName, el.nodeName);
-  t.assert(el2.isSameNode(el));
+  t.assert.equal(el2.nodeName, el.nodeName);
+  t.assert.ok(el2.isSameNode(el));
 
-  t.equal(document.body.innerHTML, `<span data-pico="${id}">foo</span>`);
-
-  t.end();
+  t.assert.equal(document.body.innerHTML, `<span data-pico="${id}">foo</span>`);
 });

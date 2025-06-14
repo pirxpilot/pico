@@ -1,7 +1,6 @@
-const test = require('tape');
+const test = require('node:test');
 const { events } = require('..');
 
 test('events', t => {
-  t.assert(typeof events === 'function', 'events exports function');
-  t.end();
+  t.assert.equal(typeof events, 'function', 'events exports function');
 });
