@@ -1,12 +1,11 @@
 const test = require('tape');
 const { cache } = require('..');
 
-test('cache', function (t) {
+test('cache', t => {
   t.assert(typeof cache === 'function', 'cache exports function');
 
-
   const state = {};
-  const emit = () => { };
+  const emit = () => {};
 
   cache(state, null, { emit });
 
@@ -14,7 +13,7 @@ test('cache', function (t) {
   t.equal(JSON.stringify(state), '{"cache":null}', 'cache is not stringified');
 
   const calls = {
-    make: 0,
+    make: 0
   };
 
   function make(key, state, emit) {
@@ -44,20 +43,18 @@ test('cache', function (t) {
   t.end();
 });
 
-
-test('cache with key function', function (t) {
+test('cache with key function', t => {
   t.assert(typeof cache === 'function', 'cache exports function');
 
-
   const state = {};
-  const emit = () => { };
+  const emit = () => {};
 
   cache(state, null, { emit });
 
   t.assert(state.cache, 'cache is added to state');
   t.equal(JSON.stringify(state), '{"cache":null}', 'cache is not stringified');
 
-  function make(key, param) {
+  function make(_key, param) {
     return {
       param
     };

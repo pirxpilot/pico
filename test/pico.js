@@ -1,7 +1,7 @@
 const test = require('tape');
 const { pico } = require('..');
 
-test('pico', function (t) {
+test('pico', t => {
   t.assert(typeof pico === 'function', 'pico exports function');
 
   const p = pico('bar', {
@@ -24,20 +24,14 @@ test('pico', function (t) {
 
   document.body.append(el);
 
-  t.equal(
-    document.body.innerHTML,
-    `<span data-pico="${id}">akuku</span>`
-  );
+  t.equal(document.body.innerHTML, `<span data-pico="${id}">akuku</span>`);
 
-  const el2 = p.render({ text: 'foo'}, emit);
+  const el2 = p.render({ text: 'foo' }, emit);
 
   t.equal(el2.nodeName, el.nodeName);
   t.assert(el2.isSameNode(el));
 
-  t.equal(
-    document.body.innerHTML,
-    `<span data-pico="${id}">foo</span>`
-  );
+  t.equal(document.body.innerHTML, `<span data-pico="${id}">foo</span>`);
 
   t.end();
 });

@@ -21,9 +21,9 @@
     "ufid": "~1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "jsdom": "~19",
     "jsdom-global": "~3",
-    "jshint": "~2",
     "tape": "~5"
   },
   "browser": {

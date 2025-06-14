@@ -1,7 +1,7 @@
 const test = require('tape');
 const { template } = require('..');
 
-test('template', function (t) {
+test('template', t => {
   document.body.innerHTML = `
     <template id='foo'>
       <span>bongo</span>
@@ -13,8 +13,7 @@ test('template', function (t) {
   t.end();
 });
 
-
-test('template updateElement', function (t) {
+test('template updateElement', t => {
   document.body.innerHTML = `
     <template id='bongo'>
       <input>
@@ -30,7 +29,7 @@ test('template updateElement', function (t) {
   t.end();
 });
 
-test('template with slots', function (t) {
+test('template with slots', t => {
   document.body.innerHTML = `
     <template id='form'>
       <form>
@@ -45,8 +44,7 @@ test('template with slots', function (t) {
       </div>
     <template>
   `;
-  const tt = template('form')
-    .slot('field', template('field'));
+  const tt = template('form').slot('field', template('field'));
   const el = tt.render({}, () => {});
 
   t.equal(el.nodeName, 'FORM', 'rendered element is a form');
