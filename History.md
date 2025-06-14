@@ -1,4 +1,10 @@
 
+1.0.2 / 2025-06-14
+==================
+
+ * replace `tape` with `node:test`
+ * use `biome` as a linter and formatter
+
 1.0.1 / 2022-06-29
 ==================
 
