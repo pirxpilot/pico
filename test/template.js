@@ -1,5 +1,5 @@
-const test = require('node:test');
-const { template } = require('..');
+import test from 'node:test';
+import { template } from '../index.js';
 
 test('template', t => {
   document.body.innerHTML = `

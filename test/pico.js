@@ -1,5 +1,5 @@
-const test = require('node:test');
-const { pico } = require('..');
+import test from 'node:test';
+import { pico } from '../index.js';
 
 test('pico', t => {
   t.assert.equal(typeof pico, 'function', 'pico exports function');
