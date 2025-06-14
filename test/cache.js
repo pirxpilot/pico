@@ -1,5 +1,5 @@
-const test = require('node:test');
-const { cache } = require('..');
+import test from 'node:test';
+import { cache } from '../index.js';
 
 test('cache', t => {
   t.assert.equal(typeof cache, 'function', 'cache exports function');
