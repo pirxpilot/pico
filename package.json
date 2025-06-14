@@ -19,11 +19,11 @@
     "component"
   ],
   "dependencies": {
-    "@pirxpilot/nanoassert": "^1.0.0",
-    "@pirxpilot/nanomorph": "~1",
-    "@pirxpilot/nanotiming": "^1.0.0",
+    "@pirxpilot/nanoassert": "~1",
+    "@pirxpilot/nanomorph": "~2",
+    "@pirxpilot/nanotiming": "~1",
     "nanolru": "~1",
-    "ufid": "~1"
+    "ufid": "~2"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
