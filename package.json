@@ -1,6 +1,6 @@
 {
   "name": "@pirxpilot/pico",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Less than nanocomponent to use with choo-like libs.",
   "author": {
     "name": "Damian Krzeminski",
