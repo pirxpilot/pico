@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.11",
-    "jsdom": "~26",
+    "jsdom": "~29",
     "jsdom-global": "~3"
   },
   "scripts": {
