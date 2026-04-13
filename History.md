@@ -1,4 +1,11 @@
 
+2.0.3 / 2026-04-13
+==================
+
+ * upgrade `jsdom` to 29
+ * upgrade `biome` to 2.4.11
+ * cleanup module exports
+
 2.0.2 / 2025-06-23
 ==================
 
