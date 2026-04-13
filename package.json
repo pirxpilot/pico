@@ -18,6 +18,12 @@
     "choo",
     "component"
   ],
+  "imports": {
+    "#assert": {
+      "node": "assert",
+      "default": "@pirxpilot/nanoassert"
+    }
+  },
   "dependencies": {
     "@pirxpilot/nanoassert": "~1",
     "@pirxpilot/nanomorph": "~2",
@@ -26,12 +32,9 @@
     "ufid": "~2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "2.4.11",
     "jsdom": "~26",
     "jsdom-global": "~3"
-  },
-  "browser": {
-    "assert": "@pirxpilot/nanoassert"
   },
   "scripts": {
     "test": "make check"
