@@ -25,14 +25,14 @@
     }
   },
   "dependencies": {
-    "@pirxpilot/nanoassert": "~1",
+    "@pirxpilot/nanoassert": "~2",
     "@pirxpilot/nanomorph": "~2",
-    "@pirxpilot/nanotiming": "~1",
+    "@pirxpilot/nanotiming": "~2",
     "nanolru": "~1",
     "ufid": "~2"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.11",
+    "@biomejs/biome": "2.4.15",
     "jsdom": "~29",
     "jsdom-global": "~3"
   },
